@@ -1,0 +1,130 @@
+.blue-bg {
+    background: linear-gradient(to right, #0098FF, #4FACFE,#4AB0FE,#3CBDFE, #24D2FE, #00F2FE );
+}
+
+body {
+    min-height: 100vh;
+    margin:  0;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+    font-size: 46px;
+    color: #4a4a4a;
+    width:  100%;
+    line-height: 1;
+    font-weight:  bold;
+}
+
+.hero {
+    background-image: url(./assets/hero.jpg);
+    min-height:  60vh;
+    background-size:  cover;
+    padding-left: 100px;
+}
+
+.map-and-title {
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    width: 45%;
+}
+
+#map {
+    width: 100%;
+    background: #ccc;
+    border: 10px solid #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .3);
+}
+
+.signup {
+    padding-top: 45px;
+    margin-top: -22px;
+    color: #fff;
+    min-height: calc(40vh - 23px);
+}
+
+.signup .content {
+    float: right;
+    width: calc(55% - 120px);
+    text-align: center;
+}
+
+input {
+    border: none;
+    height: 40px;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 18px;
+    outline: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    background: #4a4a4a;
+    height: 40px;
+    align-items: center;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 23px;
+}
+
+
+@media (max-width: 800px){
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        background-image: url(./assets/mobile-hero.jpg);
+        min-height:  250px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-top: -81px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 19px;
+    }
+
+    .map-and-title {
+        position: initial;
+        width: 100%;
+    }
+
+    #map {
+        border: none;
+        box-shadow: none;
+    }
+
+    .signup {
+        padding-top: 25px;
+        margin-top: 0px;
+        min-height: unset;
+        flex-grow: 1;
+    }
+
+    .signup .content {
+        width: 100%;
+        float: none;
+    }
+
+    input, .button {
+        width: calc(100% - 20px);
+    }
+
+    .button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
