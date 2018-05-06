@@ -19,7 +19,7 @@ $('.button').on('click', function (e) {
     e.preventDefault()
 
     if (!validateEmail())
-        return $('#err').show()
+        return $('#err').css('opacity', 1)
 
     $.ajax({
         url: 'https://script.google.com/macros/s/AKfycbw2N0X2-GkZp_9k6FP5JPYQ1c3no8ItSXp9ipWv4UmA2CMoHeg/exec',

@@ -1,3 +1,7 @@
+body * {
+    transition: all 200ms ease-in-out;
+}
+
 .blue-bg {
     background: linear-gradient(to right, #0098FF, #4FACFE,#4AB0FE,#3CBDFE, #24D2FE, #00F2FE );
 }
@@ -5,12 +9,13 @@
 body {
     min-height: 100vh;
     margin:  0;
+    background-color: #fafafa;
     font-family: 'Rubik', sans-serif;
 }
 
 h1 {
     font-size: 30px;
-    color: #4a4a4a;
+    color: #000;
     width:  100%;
     line-height: 1;
     font-weight:  bold;
@@ -20,9 +25,11 @@ h1 {
 .hero {
     background-image: url(./assets/hero.jpg);
     min-height:  60vh;
-    background-size:  cover;
+    background-size: contain;
+    background-repeat:  no-repeat;
     padding-left: 100px;
-    background-position: center;
+    background-color: #fff;
+    background-position: calc(75% + 72px);
 }
 
 .map-and-title {
@@ -38,17 +45,15 @@ h1 {
 }
 
 #map {
-    max-width: calc(100% - 20px);
-    max-height: calc(100% - 20px);
+    max-width: 100%;
+    max-height: 100%;
     background: #ccc;
-    border: 10px solid #fff;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .3);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
 }
 
 .signup {
     padding-top: 35px;
     margin-top: -1px;
-    color: #fff;
     min-height: calc(40vh - 23px);
 }
 
@@ -63,28 +68,51 @@ input {
     border: none;
     height: 40px;
     width: 50%;
-    border-radius: 5px;
     text-align: center;
-    color: #4a4a4a;
+    color: #000;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, .2);
     font-size: 16px;
     outline: none;
 }
+
+input:hover, input:focus{
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, .2);
+}
+
 
 .button {
     display: flex;
     justify-content: center;
     width: 30%;
-    background: #4a4a4a;
+    background: #000;
     height: 40px;
     align-items: center;
-    border-radius: 5px;
     margin: auto;
     margin-top: 23px;
     border: none;
     color: #fff;
     font-size: 16px;
     outline: none;
+    box-shadow: 0 0 2px 0px rgba(0, 0, 0, .2);
     cursor:  pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, .2);
+}
+
+button:active{
+    box-shadow: 0 0 0px 0px rgba(0, 0, 0, .2);
+}
+
+#err {
+    margin: 5px 0px 0px;
+    color: rgb(222, 54, 54);
+    position: absolute;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 3px;
+    opacity: 0;
 }
 
 
@@ -96,14 +124,17 @@ input {
     }
 
     .hero {
-        background-image: url(./assets/mobile-hero.jpg);
         min-height:  250px;
+        background-position:  center;
     }
 
     h1 {
         font-size: 30px;
-        margin-top: -81px;
-        text-align: center;
+        margin:  10px 20px;
+    }
+
+    h1:first-child {
+        padding-top: 10px;
     }
 
     h2 {
@@ -114,7 +145,6 @@ input {
     .map-and-title {
         position: initial;
         width: 100%;
-        background: #efeeea;
     }
 
     #map {
@@ -124,7 +154,7 @@ input {
     }
 
     .signup {
-        padding-top: 25px;
+        padding-top: 20px;
         margin-top: 0px;
         min-height: unset;
         flex-grow: 1;
@@ -145,7 +175,6 @@ input {
     }
     .map-and-title p {
         font-size: 18px;
-        text-align: center;
-        margin: 10px;
+        margin: 10px 20px;
     }
 }

@@ -13,7 +13,7 @@ var defaults = {
     radius: 10,
     scale: 1.0,
     corners: 1,
-    color: '#fff',
+    color: '#000',
     fadeColor: 'transparent',
     opacity: 0.25,
     rotate: 0,
