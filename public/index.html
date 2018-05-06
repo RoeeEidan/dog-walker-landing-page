@@ -14,21 +14,26 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
+<body class='blue-bg'>
     <div class="hero">
 
     </div>
     <div class="map-and-title">
-        <h1>
-            Want to know all about your dog’s walks?
-        </h1>
-        <img src="./assets/map.jpg" id="map">
+        <h1>Have a Dog Walker?</h1>
+        <h1>Want to know everything about the walks?</h1>
+        <p>
+            We building you a solution so you can know your dog is getting walked properly!
+        </p>
+        <div style='position: relative'>
+            <img src="./assets/map.jpg" id="map">
+        </div>
     </div>
-    <div class="signup blue-bg">
+    <div class="signup">
         <div class='content'>
             <h2>Sign Up For More Information</h2>
             <form>
-                <input name='email' type="text" placeholder="exemple@exemple.com">
+                <input name='email' type="text" placeholder="Your email">
+                <p style='display:none;margin: 5px 0 5px;color: #de3636;' id='err'>Please check you email address</p>
                 <button class="button">Sign Up</button>
             </form>
 

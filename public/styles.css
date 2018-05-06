@@ -9,11 +9,12 @@ body {
 }
 
 h1 {
-    font-size: 46px;
+    font-size: 30px;
     color: #4a4a4a;
     width:  100%;
     line-height: 1;
     font-weight:  bold;
+    margin-bottom:  0px;
 }
 
 .hero {
@@ -21,25 +22,32 @@ h1 {
     min-height:  60vh;
     background-size:  cover;
     padding-left: 100px;
+    background-position: center;
 }
 
 .map-and-title {
     position: absolute;
     left: 100px;
+    top: 50px;
     bottom: 50px;
     width: 45%;
 }
 
+.map-and-title p {
+    font-size: 20px;
+}
+
 #map {
-    width: 100%;
+    max-width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
     background: #ccc;
     border: 10px solid #fff;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .3);
 }
 
 .signup {
-    padding-top: 45px;
-    margin-top: -22px;
+    padding-top: 35px;
+    margin-top: -1px;
     color: #fff;
     min-height: calc(40vh - 23px);
 }
@@ -76,6 +84,7 @@ input {
     color: #fff;
     font-size: 16px;
     outline: none;
+    cursor:  pointer;
 }
 
 
@@ -105,11 +114,13 @@ input {
     .map-and-title {
         position: initial;
         width: 100%;
+        background: #efeeea;
     }
 
     #map {
         border: none;
         box-shadow: none;
+        max-width: 100%;
     }
 
     .signup {
@@ -131,5 +142,10 @@ input {
     .button {
         margin-top: 10px;
         margin-bottom: 20px;
+    }
+    .map-and-title p {
+        font-size: 18px;
+        text-align: center;
+        margin: 10px;
     }
 }
