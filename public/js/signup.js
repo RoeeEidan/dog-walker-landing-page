@@ -18,8 +18,14 @@ function validateEmail() {
 $('.button').on('click', function (e) {
     e.preventDefault()
 
-    if (!validateEmail())
-        return $('#err').css('opacity', 1)
+    if (!validateEmail()) {
+        if ($(window).width() > 800)
+            $('#err').css('opacity', 1)
+        else
+            $('input').css('border', '1px solid red')
+
+        return
+    }
 
     $.ajax({
         url: 'https://script.google.com/macros/s/AKfycbw2N0X2-GkZp_9k6FP5JPYQ1c3no8ItSXp9ipWv4UmA2CMoHeg/exec',
